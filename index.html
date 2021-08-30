@@ -43,11 +43,11 @@
           <label for="">Select Tip %</label>
 
           <div class="tips">
-            <input class="tip given" type="button" value="5%" />
-            <input class="tip given" type="button" value="10%" />
-            <input class="tip given" type="button" value="15%" />
-            <input class="tip given" type="button" value="25%" />
-            <input class="tip given" type="button" value="50%" />
+            <input class="tip given" type="button" data-tip="5" value="5%" />
+            <input class="tip given" type="button" data-tip="10" value="10%" />
+            <input class="tip given" type="button" data-tip="15" value="15%" />
+            <input class="tip given" type="button" data-tip="25" value="25%" />
+            <input class="tip given" type="button" data-tip="50" value="50%" />
             <input
               class="tip custom"
               type="text"
@@ -80,7 +80,7 @@
             <p id="total">$0.00</p>
           </div>
 
-          <input type="reset" class="reset" value="Reset" />
+          <input type="reset" class="reset" value="Reset" id="reset" />
         </section>
       </form>
     </div>

@@ -121,8 +121,12 @@ input[type="text"]:focus {
   color: var(--White);
   background-color: var(--Very-dark-cyan);
 }
-.tip.given:hover,
-.tip.given:focus {
+.tip.completed {
+  background-color: var(--Strong-cyan);
+  color: var(--Very-dark-cyan);
+}
+
+.tip.given:hover {
   background-color: var(--Light-grayish-cyan);
   color: var(--Very-dark-cyan);
 }
@@ -169,8 +173,11 @@ input[type="text"]:focus {
   background-color: hsl(183, 100%, 20%);
   transition: 200ms ease-in-out;
 }
-.reset:hover,
-.reset:focus {
+.reset.filled {
+  background-color: var(--Strong-cyan);
+  color: var(--Very-dark-cyan);
+}
+.reset:hover {
   background-color: var(--Light-grayish-cyan);
 }
 
