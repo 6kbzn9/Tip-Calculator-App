@@ -83,7 +83,8 @@ tips.forEach((tip) => {
 });
 
 reset.addEventListener("click", () => {
+  resetCompleted();
+  reset.classList.remove("filled");
   tipAmount.textContent = "$0.00";
   totalAmount.textContent = "$0.00";
-  reset.classList.remove("filled");
 });
