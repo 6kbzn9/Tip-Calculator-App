@@ -1,44 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Tip calculator app</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Frontend Mentor | Tip calculator app</title>
 
-  Bill
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
 
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.css"
+    />
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <p class="header">
+        spli<br />
+        <span>tter</span>
+      </p>
 
-  Number of People
+      <form action="#" class="calculator">
+        <section class="tips-wrapper">
+          <label for="bill">Bill</label>
+          <div class="input top">
+            <input type="text" placeholder="0" id="bill" dir="rtl" />
+            <i class="fas fa-dollar-sign"></i>
+          </div>
 
-  Tip Amount
-  / person
+          <label for="">Select Tip %</label>
 
-  Total
-  / person
+          <div class="tips">
+            <input class="tip given" type="button" value="5%" />
+            <input class="tip given" type="button" value="10%" />
+            <input class="tip given" type="button" value="15%" />
+            <input class="tip given" type="button" value="25%" />
+            <input class="tip given" type="button" value="50%" />
+            <input
+              class="tip custom"
+              type="text"
+              placeholder="Custom"
+              dir="rtl"
+            />
+          </div>
 
-  Reset
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+          <label for="people">Number of People</label>
+          <div class="input bottom">
+            <input type="text" placeholder="0" id="people" dir="rtl" />
+            <i class="fas fa-user"></i>
+          </div>
+        </section>
+
+        <section class="results">
+          <div class="tip-amount">
+            <p>
+              Tip Amount <br />
+              <span>/ person</span>
+            </p>
+          </div>
+          <div class="total-amount">
+            <p>
+              Total <br />
+              <span>/ person</span>
+            </p>
+          </div>
+          <input type="reset" />
+        </section>
+      </form>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
 </html>

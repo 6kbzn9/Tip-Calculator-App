@@ -1,0 +1,124 @@
+/* variables */
+:root {
+  --Strong-cyan: hsl(172, 67%, 45%);
+  --Very-dark-cyan: hsl(183, 100%, 15%);
+  --Darker-grayish-cyan: hsl(186, 14%, 43%);
+  --Dark-grayish-cyan: hsl(184, 14%, 56%);
+  --Light-grayish-cyan: hsl(185, 41%, 84%);
+  --Lighter-grayish-cyan: hsl(189, 41%, 97%);
+  --White: hsl(0, 0%, 100%);
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--Light-grayish-cyan);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-size: 16px;
+  font-family: "Space Mono", monospace;
+}
+
+.wrapper {
+  width: clamp(800px, 85%, 930px);
+}
+
+.header {
+  color: var(--Very-dark-cyan);
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.calculator {
+  background-color: var(--White);
+  border-radius: 12px;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2rem;
+  align-items: center;
+  width: 95%;
+  margin: 0 auto;
+}
+
+input {
+  border: none;
+  outline: none;
+  font-family: "Space Mono", monospace;
+}
+label {
+  font-size: 0.9rem;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+.tips-wrapper {
+  color: var(--Darker-grayish-cyan);
+  padding: 0 1rem;
+}
+.input {
+  position: relative;
+}
+.input i {
+  position: absolute;
+  left: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--Dark-grayish-cyan);
+  width: 1rem;
+}
+.input.top {
+  margin-bottom: 1.75rem;
+}
+
+.input input {
+  width: 100%;
+  padding: 0.25rem 0.5rem;
+  font-size: 1.2rem;
+}
+
+input[type="text"] {
+  background-color: var(--Lighter-grayish-cyan);
+  border-radius: 5px;
+  color: var(--Very-dark-cyan);
+}
+input[type="text"]:focus {
+  border: 1px solid var(--Strong-cyan);
+}
+
+.tips {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-gap: 0.75rem;
+  margin-bottom: 1.75rem;
+}
+
+.tip {
+  padding: 0.325rem 0;
+  border-radius: 5px;
+  font-size: 1.25rem;
+}
+
+.tip.given {
+  cursor: pointer;
+  color: var(--White);
+  background-color: var(--Very-dark-cyan);
+}
+.tip.given:hover,
+.tip.given:focus {
+  background-color: var(--Light-grayish-cyan);
+  color: var(--Very-dark-cyan);
+}
+.tip.custom {
+  padding-right: 0.5rem;
+}
